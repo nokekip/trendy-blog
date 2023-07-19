@@ -45,15 +45,15 @@ adminOnly();
                 <!-- content -->
                 <a href="<?php echo BASE_URL . '/admin/users/manageUsers.php'; ?>" class="dashboard-data users">
                     <h3><i class="fa-solid fa-users"></i> Users</h3>
-                    <h2>5</h2>
+                    <h2><?php echo $totalUsers = getTotalRows('users'); ?></h2>
                 </a>
                 <a href="<?php echo BASE_URL . '/admin/posts/managePosts.php'; ?>" class="dashboard-data posts">
                     <h3><i class="fa-solid fa-newspaper"></i> Posts</h3>
-                    <h2>20</h2>
+                    <h2><?php echo $totalPosts = getTotalRows('posts'); ?></h2>
                 </a>
                 <a href="<?php echo BASE_URL . '/admin/topics/manageTopics.php'; ?>" class="dashboard-data topics">
                     <h3><i class="fa-solid fa-tag"></i> Topics</h3>
-                    <h2>7</h2>
+                    <h2><?php echo $totalTopics = getTotalRows('topics'); ?></h2>
                 </a>
                 <!-- // content -->
                 
