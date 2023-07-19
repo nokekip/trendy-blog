@@ -1,0 +1,105 @@
+header {
+    background-color: #011a2e;
+}
+
+.admin-wrapper {
+    display: flex;
+    height: calc(100% - 66px);
+}
+
+.admin-wrapper .menu {
+    flex: 2;
+    height: 100%;
+    background: #013258;
+}
+
+.admin-wrapper .menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: #f0f8ff;
+}
+
+.admin-wrapper .menu ul li a {
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid #00243f;
+}
+
+.admin-wrapper .menu ul li a:hover {
+    background: #00243f;
+}
+
+.admin-wrapper .admin-content {
+    flex: 8;
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+
+.admin-wrapper .admin-content .dashboard-data {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #8a8a8a33;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.admin-wrapper .admin-content .dashboard-data:hover {
+    transform: scale(1.1);
+}
+
+.admin-wrapper .admin-content .dashboard-data.users {
+    background: #3498db;
+}
+
+.admin-wrapper .admin-content .dashboard-data.posts {
+    background: #ff8c00;
+}
+
+.admin-wrapper .admin-content .dashboard-data.topics {
+    background: #3cb371;
+}
+
+.admin-content .page-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #add8e6;
+}
+
+.edit {
+    color: #008000;
+}
+
+.delete {
+    color: #ff0000;
+}
+
+.publish {
+    color: #0000ff;
+}
+
+.edit:hover,
+.delete:hover,
+.post:hover {
+    text-decoration: underline;
+}
+
+form div {
+    margin-bottom: 15px;
+}
