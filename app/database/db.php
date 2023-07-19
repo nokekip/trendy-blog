@@ -13,13 +13,15 @@ function demo($value)
 // Function to execute query
 function executeQuery($sql, $data)
 {
-
     global $conn;
 
     $stmt = $conn->prepare($sql);
-    $values = array_values($data);
-    $types = str_repeat('s', count($values));
-    $stmt->bind_param($types, ...$values);
+
+    if ($data) {
+        $values = array_values($data);
+        $types = str_repeat('s', count($values));
+        $stmt->bind_param($types, ...$values);
+    }
     $stmt->execute();
     return $stmt;
 }
