@@ -203,12 +203,17 @@ function searchPosts($term)
     return $records;
 }
 
-// total
-function countRows()
+// count total rows
+function getTotalRows($table)
 {
     global $conn;
 
-    $sql = "SELECT COUNT(*) as total_rows FROM users";
-    $stmt = executeQuery($sql,);
-    
+    // Ensure the table name is safe to use in the SQL query
+    $safeTable = mysqli_real_escape_string($conn, $table);
+
+    // SQL query to count total rows in the specified table
+    $sql = "SELECT COUNT(*) AS total_count FROM $safeTable";
+    $stmt = executeQuery($sql, []);
+    $row = $stmt->get_result()->fetch_assoc();
+    return $row['total_count'];
 }
